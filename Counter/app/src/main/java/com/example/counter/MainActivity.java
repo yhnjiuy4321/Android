@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             timesText.setText(String.valueOf(times));
         }else {
             timesText.setText("已達上限");
-            countButton.setEnabled(false);
+            countButton.setEnabled(false);//意思是
         }
 
     }
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         TextView timesText=(TextView) findViewById(R.id.times);
 
         timesText.setText("0");
-        countButton.setEnabled(true);
+        countButton.setEnabled(true);//
     }
 
 }
