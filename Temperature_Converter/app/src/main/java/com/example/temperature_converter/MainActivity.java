@@ -12,6 +12,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -34,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
         double input= Double.parseDouble(EditView.getText().toString());
         double result;
+
         result= (input-32)*5/9;
-        resultText.setText(String.valueOf(result));
+        resultText.setText(String.format(Locale.US,"攝氏溫度: %.2f°C", result));
+
         convertButtonF.setEnabled(false);
         convertButtonC.setEnabled(false);
 
@@ -49,8 +53,10 @@ public class MainActivity extends AppCompatActivity {
 
         double input= Double.parseDouble(EditView.getText().toString());
         double result;
+
         result= input*9/5+32;
-        resultText.setText(String.valueOf(result));
+        resultText.setText(String.format(Locale.US,"華氏溫度: %.2f°F", result));
+
         convertButtonC.setEnabled(false);
         convertButtonF.setEnabled(false);
     }
