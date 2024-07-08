@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         double result;
 
         result= input*9/5+32;
-        resultText.setText(String.format(Locale.US,"華氏溫度: %.2f°F", result));
+        resultText.setText(String.format(Locale.US,"華氏溫度: %.2f°F", result));//setText
 
         convertButtonC.setEnabled(false);
         convertButtonF.setEnabled(false);
