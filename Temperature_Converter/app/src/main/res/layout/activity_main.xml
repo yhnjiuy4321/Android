@@ -5,6 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F6F3F3"
+    android:foregroundTint="#FFFFFF"
     android:visibility="visible"
     tools:context=".MainActivity"
     tools:visibility="visible">
