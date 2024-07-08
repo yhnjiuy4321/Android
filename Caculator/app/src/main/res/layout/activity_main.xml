@@ -10,12 +10,12 @@
     tools:visibility="visible">
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/input1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Num1"
         android:inputType="number"
-        android:text="Num1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -24,12 +24,12 @@
         app:layout_constraintVertical_bias="0.093" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/input2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Num2"
         android:inputType="number"
-        android:text="Num2"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,9 +39,10 @@
         app:layout_constraintVertical_bias="0.211" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Plus"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -51,9 +52,10 @@
         app:layout_constraintVertical_bias="0.383" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/cut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Cut"
         android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,9 +65,10 @@
         app:layout_constraintVertical_bias="0.383" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/multiply"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Multiply"
         android:text="*"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,9 +78,10 @@
         app:layout_constraintVertical_bias="0.383" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/divide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="Divide"
         android:text="/"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +104,7 @@
         app:layout_constraintVertical_bias="0.528" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
