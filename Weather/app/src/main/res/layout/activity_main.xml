@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#181B2F"
+    android:background="#16182C"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101">
+        app:layout_constraintVertical_bias="0.110000014">
 
         <TextView
             android:id="@+id/textView"
@@ -100,9 +100,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="404dp"
-        android:layout_height="253dp"
-        android:background="#2B314E"
+        android:id="@+id/linearLayout3"
+        android:layout_width="398dp"
+        android:layout_height="230dp"
+        android:background="@drawable/rounded_corners"
+        android:backgroundTint="#2D304F"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,21 +119,34 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:drawableTint="#FFFFFF"
             android:text="預計大約上午11點時局部多雲。"
             android:textAlignment="textStart"
             android:textColor="#FAFAFA"
+            android:textDecoration="underline"
             android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/editTextTextMultiLine3"
+            android:layout_width="381dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="20dp"
+            android:ems="10"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:padding="0dp"
+            android:paddingTop="0dp" />
 
         <LinearLayout
             android:layout_width="399dp"
-            android:layout_height="200dp"
+            android:layout_height="175dp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -152,7 +167,7 @@
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="26°"
                     android:textAlignment="center"
                     android:textColor="#FAFAFA"
@@ -161,7 +176,8 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -182,7 +198,7 @@
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="26°"
                     android:textAlignment="center"
                     android:textColor="#FAFAFA"
@@ -192,7 +208,8 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -213,7 +230,7 @@
                 <TextView
                     android:id="@+id/textView13"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="25°"
                     android:textAlignment="center"
                     android:textColor="#FAFAFA"
@@ -222,7 +239,8 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="148dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -243,7 +261,7 @@
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:text="日出"
                     android:textAlignment="center"
                     android:textColor="#FAFAFA"
