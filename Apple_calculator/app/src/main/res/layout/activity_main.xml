@@ -38,7 +38,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/AllClear"
+                android:id="@+id/allclear"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -48,7 +48,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/change"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -57,7 +57,7 @@
                 android:text="+/-" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/precent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -66,7 +66,7 @@
                 android:text="%" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/divide"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -86,7 +86,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/AllClear"
+                android:id="@+id/n7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -97,7 +97,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/n8"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -106,7 +106,7 @@
                 android:text="8" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/n9"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -115,7 +115,7 @@
                 android:text="9" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/multiply"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -135,7 +135,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/AllClear"
+                android:id="@+id/n4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -146,7 +146,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/n5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -155,7 +155,7 @@
                 android:text="5" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/n6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -164,7 +164,7 @@
                 android:text="6" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/cut"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -184,7 +184,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/AllClear"
+                android:id="@+id/n1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -195,7 +195,7 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/n2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -204,7 +204,7 @@
                 android:text="2" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/n3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -213,7 +213,7 @@
                 android:text="3" />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/plus"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="3dp"
@@ -233,16 +233,17 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/AllClear"
+                android:id="@+id/n0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="1.5dp"
                 android:layout_weight="0.5"
                 android:backgroundTint="#444547"
                 android:text="0"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/dot"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
@@ -250,9 +251,12 @@
                 android:text="." />
 
             <Button
-                android:id="@+id/button4"
+                android:id="@+id/equal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginLeft="1.5dp"
+                android:layout_marginRight="3dp"
                 android:layout_weight="0.25"
                 android:backgroundTint="#EAA939"
                 android:text="="
