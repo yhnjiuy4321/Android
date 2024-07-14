@@ -9,6 +9,16 @@
     android:background="#16182C"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background" />
+
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="340dp"
@@ -267,6 +277,7 @@
                     android:textColor="#FAFAFA"
                     android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="parent" />
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
