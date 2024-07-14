@@ -11,8 +11,9 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -134,7 +135,6 @@
             android:text="預計大約上午11點時局部多雲。"
             android:textAlignment="textStart"
             android:textColor="#FAFAFA"
-            android:textDecoration="underline"
             android:textSize="18sp" />
 
         <EditText
