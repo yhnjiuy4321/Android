@@ -1,6 +1,8 @@
-package com.example.apple_calculator;
+package com.example.activitypra2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,5 +23,22 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-    
+
+
+    public void sentFruitname(View view) {
+        //按下按鈕A，傳送Apple，按下按鈕B，傳送Banana
+        String fruit ;
+
+        if(view.getId() == R.id.buttonA){
+            fruit = "Apple";
+        }else{
+            fruit = "Banana";
+        }
+
+        Intent intent = new Intent(this, FruitActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("fruit", fruit);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
 }

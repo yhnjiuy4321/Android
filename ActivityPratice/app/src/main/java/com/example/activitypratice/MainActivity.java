@@ -1,6 +1,8 @@
-package com.example.apple_calculator;
+package com.example.activitypratice;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,5 +23,14 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-    
+
+    public void openSecondActivity(View view) {
+
+        Intent intent = new Intent(this, SecondActivity.class);
+        // Intent is used to switch between activities
+        startActivity(intent);
+
+    }
+
+
 }
