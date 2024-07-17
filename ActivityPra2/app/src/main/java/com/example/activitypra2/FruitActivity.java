@@ -30,15 +30,22 @@ public class FruitActivity extends AppCompatActivity {
         if (bundle != null) {
             String fruit = String.format(bundle.getString("FRUIT"));
 
+            // set Name
             TextView name = findViewById(R.id.Name);
-            name.setText(fruit);
+            name.setText(fruit);//意思是把fruit放到name裡面
 
+            // set Image
             ImageView image = findViewById(R.id.AppleImg);
-            String fruitName = fruit.toLowerCase();
-            int resId = getResources().getIdentifier(fruitName, "drawable", getPackageName());
-            Drawable drawable = ContextCompat.getDrawable(this, resId);
-            image.setImageDrawable(drawable);
-
+            if (image != null && fruit != null) {
+                String fruitName = fruit.toLowerCase();//把fruit變成小寫
+                int resId = getResources().getIdentifier(fruitName, "drawable", getPackageName());//取得圖片的id，getPackageName()取得package名稱
+                if (resId != 0) {
+                    Drawable drawable = ContextCompat.getDrawable(this, resId);//取得圖片
+                    image.setImageDrawable(drawable);//設定圖片
+                }else{
+                    image.setVisibility(View.GONE);
+                }
+            }
         }
     }
 

@@ -29,16 +29,24 @@ public class MainActivity extends AppCompatActivity {
         //按下按鈕A，傳送Apple，按下按鈕B，傳送Banana
         String fruit ;
 
-        if(view.getId() == R.id.buttonA){
+        if(view.getId() == R.id.buttonA){ //如果按下的是按鈕A
             fruit = "Apple";
-        }else{
+        }else if(view.getId() == R.id.buttonB){ //如果按下的是按鈕B
             fruit = "Banana";
+        }
+        else{
+            fruit = "";
         }
 
         Intent intent = new Intent(this, FruitActivity.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("fruit", fruit);
-        intent.putExtras(bundle);
-        startActivity(intent);
+        // 設定intent，從MainActivity到FruitActivity，this是指MainActivity(自己)
+
+        // 設定一個bundle來放資料
+        Bundle bundle = new Bundle(); //bundle是一個資料包，可以放很多資料
+        bundle.putString("FRUIT", fruit);//FRUIT是key，fruit是value
+
+        // 利用intent攜帶bundle的資料
+        intent.putExtras(bundle);//把bundle放到intent裡面
+        startActivity(intent);//啟動intent
     }
 }
