@@ -1,6 +1,9 @@
 package com.example.bmicaculator;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,16 @@ public class Cal_Activity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void calculateBMI(View view) {
+        EditText height = findViewById(R.id.input1);
+        EditText weight = findViewById(R.id.input2);
+        double bmi = Double.parseDouble(weight.getText().toString()) / Math.pow(Double.parseDouble(height.getText().toString()) / 100, 2);
+        Intent intent = new Intent();
+        intent.putExtra("bmi", bmi);
+        setResult(RESULT_OK, intent);
+        finish();
+
     }
 }
