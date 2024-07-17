@@ -28,7 +28,12 @@ public class Cal_Activity extends AppCompatActivity {
     public void BMI(View view) {
         EditText height = findViewById(R.id.input1);
         EditText weight = findViewById(R.id.input2);
-        double bmi = Double.parseDouble(weight.getText().toString()) / Math.pow(Double.parseDouble(height.getText().toString()) / 100, 2);
+
+        double h = Double.parseDouble(height.getText().toString());
+        double w = Double.parseDouble(weight.getText().toString());
+        h = h/100; //將身高從公分轉換成公尺
+        double bmi = w / (h * h);
+
         Intent intent = new Intent();
         intent.putExtra("bmi", bmi);
         setResult(RESULT_OK, intent);
