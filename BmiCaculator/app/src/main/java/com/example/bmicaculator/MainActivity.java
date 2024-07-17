@@ -67,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
     private void updateUI() {
         //這裡寫更新UI的程式碼
         TextView Result = (TextView)findViewById(R.id.Result);
-        Result.setText(String.valueOf(bmi));
+        Result.setText(String.format("%.2f", bmi));
+
 
         if(bmi < 18.5){
             value = (TextView)findViewById(R.id.thin_value);
