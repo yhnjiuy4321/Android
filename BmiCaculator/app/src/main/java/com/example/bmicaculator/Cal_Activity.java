@@ -25,7 +25,7 @@ public class Cal_Activity extends AppCompatActivity {
         });
     }
 
-    public void calculateBMI(View view) {
+    public void BMI(View view) {
         EditText height = findViewById(R.id.input1);
         EditText weight = findViewById(R.id.input2);
         double bmi = Double.parseDouble(weight.getText().toString()) / Math.pow(Double.parseDouble(height.getText().toString()) / 100, 2);
