@@ -45,7 +45,7 @@ public class US_EXcu extends AppCompatActivity {
             double result = money * exrate;
             Intent intent = new Intent();
             intent.putExtra("inputUSD", money);
-            intent.putExtra("NTD", result);
+            intent.putExtra("NTD1", result);
             setResult(RESULT_OK, intent);
             finish();
         }

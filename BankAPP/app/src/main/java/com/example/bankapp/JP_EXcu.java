@@ -35,14 +35,14 @@ public class JP_EXcu extends AppCompatActivity {
         double exrate = Double.parseDouble(rate.getText().toString());
 
         if (view.getId() == R.id.exchangeBTN2) {
-            double result = money * exrate;
+            double result = money / exrate;
             Intent intent = new Intent();
             intent.putExtra("inputNTD", money);
             intent.putExtra("JPY", result);
             setResult(RESULT_OK, intent);
             finish();
         }else if (view.getId() == R.id.exchangeBTN1) {
-            double result = money / exrate;//
+            double result = money * exrate;
             Intent intent = new Intent();
             intent.putExtra("inputJPY", money);
             intent.putExtra("NTD", result);

@@ -87,11 +87,11 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             error();
                         }
-                    }else if (o.getData().hasExtra("NTD")) {
-                        Result = o.getData().getDoubleExtra("NTD", 0);
+                    }else if (o.getData().hasExtra("NTD1")) {
+                        Result = o.getData().getDoubleExtra("NTD1", 0);
                         Money = o.getData().getDoubleExtra("inputUSD", 0); //取得intent的資料，第二個參數是預設值
                         if (TotalUSD >= Money) {
-                            TotalUSD -= Money; //
+                            TotalUSD -= Money;
                             TotalNTD += Result;
                             updateUI();
                         } else {
