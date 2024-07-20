@@ -28,36 +28,25 @@ public class NTD_dp_wd extends AppCompatActivity {
 
 
     //輸入金額後存款
-    public void dp(View view) {
-
-
-        
-        EditText amount = findViewById(R.id.inputMoney);
-        double money = Double.parseDouble(amount.getText().toString());//將輸入的金額轉換成double
-
-        Intent intent = new Intent();
-        intent.putExtra("Total1", money);//將存款金額放入intent，並命名為Total1，money為存款金額
-        setResult(RESULT_OK, intent);//回傳資料
-        finish();//結束此Activity
-
-    }
-
-    //輸入金額後提款
-    public void wd(View view) {
+    public void process(View view) {
 
         EditText amount = findViewById(R.id.inputMoney);
         double money = Double.parseDouble(amount.getText().toString());//將輸入的金額轉換成double
 
+        if(view.getId() == R.id.Deposit) {
 
-        Intent intent = new Intent();
-        intent.putExtra("Total2", money);
-        setResult(RESULT_OK, intent);//
-        finish();
 
+            Intent intent1 = new Intent();
+            intent1.putExtra("Total1", money);//將存款金額放入intent，並命名為Total1，money為存款金額
+            setResult(RESULT_OK, intent1);//回傳資料
+            finish();//結束此Activity
+
+
+        }else if(view.getId() == R.id.Withdraw) {
+            Intent intent2 = new Intent();
+            intent2.putExtra("Total2", money);//將存款金額放入intent，並命名為Total2，money為存款金額
+            setResult(RESULT_OK, intent2);
+            finish();
+        }
     }
-
-
-
-
-
 }

@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
-                android:onClick="dp"
+                android:onClick="process"
                 android:text="存錢"
                 android:textSize="20sp" />
 
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
-                android:onClick="wd"
+                android:onClick="process"
                 android:text="領錢"
                 android:textSize="20sp" />
         </LinearLayout>
