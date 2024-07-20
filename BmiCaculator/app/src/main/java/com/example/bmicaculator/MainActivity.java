@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onActivityResult(ActivityResult o) {
                 //這裡寫另一個Activity回傳資料後的處理
-                if(o.getData() != null && o.getResultCode()== Activity.RESULT_OK){
+                if(o.getData() != null && o.getResultCode()== Activity.RESULT_OK){ //
                     bmi = o.getData().getDoubleExtra("bmi", -1);
                     updateUI();
                 }

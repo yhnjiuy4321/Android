@@ -23,21 +23,20 @@ public class NTD_dp_wd extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
     }
 
-    double Total; //帳戶總額
 
     //輸入金額後存款
     public void dp(View view) {
 
         EditText amount = findViewById(R.id.inputMoney);
-        double money = Double.parseDouble(amount.getText().toString());
-        Total = Total + money;
+        double money = Double.parseDouble(String.valueOf(amount));
 
         Intent intent = new Intent();
-        intent.putExtra("Total", Total);
-        setResult(RESULT_OK, intent);
-        finish();
+        intent.putExtra("Total1", money);
+        setResult(RESULT_OK, intent);//回傳資料
+        finish();//結束此Activity
 
     }
 
@@ -45,14 +44,11 @@ public class NTD_dp_wd extends AppCompatActivity {
     public void wd(View view) {
 
         EditText amount = findViewById(R.id.inputMoney);
-        double money = Double.parseDouble(amount.getText().toString());
-        Total = Total - money;
-        if (Total < 0) {
-            Total = 0;
-        }
+        double money = Double.parseDouble(String.valueOf(amount));
+
 
         Intent intent = new Intent();
-        intent.putExtra("Total", Total);
+        intent.putExtra("Total2", money);
         setResult(RESULT_OK, intent);
         finish();
 
