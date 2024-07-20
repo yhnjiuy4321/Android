@@ -23,7 +23,11 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityResultLauncher<Intent> intentActivityResultLauncher;
     private double Money;
-    private double Total =0;
+    private double TotalNTD =0;
+    private double TotalUSD =0;
+    private double TotalJPY =0;
+    private double JPY =0;
+    private double Result =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +47,33 @@ public class MainActivity extends AppCompatActivity {
                 if(o.getData() != null && o.getResultCode()== Activity.RESULT_OK){
                     if(o.getData().hasExtra("Total1")){ //hasExtra()判斷intent是否有這個資料
                         Money = o.getData().getDoubleExtra("Total1", 0);
-                        Total += Money;
+                        TotalNTD += Money;
                         updateUI();
                     }else if(o.getData().hasExtra("Total2")) {
                         Money = o.getData().getDoubleExtra("Total2", 0);
-                        if (Total >= Money) {
-                            Total -= Money;
+                        if (TotalNTD >= Money) {
+                            TotalNTD -= Money;
                             updateUI();
+                        } else {
+                            error();
+                        }
+                    }else if (o.getData().hasExtra("JPY")){
+                        JPY = o.getData().getDoubleExtra("JPY", 0);
+                        Money = o.getData().getDoubleExtra("inputNTD", 0);
+                        if (TotalNTD >= Money) {
+                            TotalNTD -= Money;
+                            TotalJPY += JPY;
+                            updateUI();
+                        } else {
+                            error();
+                        }
+                    }
+                    else if (o.getData().hasExtra("NTD")) {
+                        Result = o.getData().getDoubleExtra("NTD", 0);
+                        Money = o.getData().getDoubleExtra("inputJPY", 0);
+                        if (TotalJPY >= Money) {
+                            TotalJPY -= Money;
+                            TotalNTD += Result;
                         } else {
                             error();
                         }
@@ -57,9 +81,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
 
 
@@ -69,14 +90,25 @@ public class MainActivity extends AppCompatActivity {
         intentActivityResultLauncher.launch(intent);//啟動intent
     }
 
+    //跳轉到JP_EXcu
+    public void jpEX(View view) {
+        Intent intent = new Intent(this, JP_EXcu.class);
+        intentActivityResultLauncher.launch(intent);
+    }
+
     //更新UI
     private void updateUI() {
-        TextView textView = findViewById(R.id.NTD_Amount);
-        textView.setText(String.valueOf(Total));//將Total轉換成字串
 
-        TextView textView2 = findViewById(R.id.Result);
-        textView2.setText("操作成功");
-        textView2.setTextColor(parseColor("#00FF00"));//字體改綠色
+
+        TextView textView = findViewById(R.id.JPY_Amount);
+        textView.setText(String.valueOf(TotalJPY));//將Total轉換成字串
+
+        TextView textView1 = findViewById(R.id.NTD_Amount);
+        textView1.setText(String.valueOf(TotalNTD));//將Total轉換成字串
+
+        TextView result = findViewById(R.id.Result);
+        result.setText("操作成功");
+        result.setTextColor(parseColor("#00FF00"));//字體改綠色
     }
 
     private void error() {

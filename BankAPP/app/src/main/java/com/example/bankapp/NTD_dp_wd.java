@@ -34,13 +34,10 @@ public class NTD_dp_wd extends AppCompatActivity {
         double money = Double.parseDouble(amount.getText().toString());//將輸入的金額轉換成double
 
         if(view.getId() == R.id.Deposit) {
-
-
             Intent intent1 = new Intent();
             intent1.putExtra("Total1", money);//將存款金額放入intent，並命名為Total1，money為存款金額
             setResult(RESULT_OK, intent1);//回傳資料
             finish();//結束此Activity
-
 
         }else if(view.getId() == R.id.Withdraw) {
             Intent intent2 = new Intent();

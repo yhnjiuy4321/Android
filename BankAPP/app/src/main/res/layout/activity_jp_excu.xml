@@ -45,13 +45,12 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/input"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="text"
-                android:text="Name" />
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,13 +70,12 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextText3"
+                android:id="@+id/Rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="text"
-                android:text="Name"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
@@ -94,19 +92,21 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/exchangeBTN1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
+                android:onClick="exchange"
                 android:text="日圓換台幣" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/exchangeBTN2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
+                android:onClick="exchange"
                 android:text="台幣換日圓"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />

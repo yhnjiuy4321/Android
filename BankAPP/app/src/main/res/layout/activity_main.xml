@@ -129,7 +129,7 @@
                         android:textAlignment="textEnd" />
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/JPY_Amount"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -140,6 +140,7 @@
                     android:id="@+id/MainBTN3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="jpEX"
                     android:text="日圓換匯" />
             </LinearLayout>
         </LinearLayout>
@@ -166,9 +167,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:gravity="center|left"
-                android:text="000"
                 android:textAlignment="viewStart"
-                android:textSize="18sp" />
+                android:textSize="24sp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
