@@ -30,11 +30,13 @@ public class NTD_dp_wd extends AppCompatActivity {
     //輸入金額後存款
     public void dp(View view) {
 
+
+        
         EditText amount = findViewById(R.id.inputMoney);
-        double money = Double.parseDouble(String.valueOf(amount));
+        double money = Double.parseDouble(amount.getText().toString());//將輸入的金額轉換成double
 
         Intent intent = new Intent();
-        intent.putExtra("Total1", money);
+        intent.putExtra("Total1", money);//將存款金額放入intent，並命名為Total1，money為存款金額
         setResult(RESULT_OK, intent);//回傳資料
         finish();//結束此Activity
 
@@ -44,12 +46,12 @@ public class NTD_dp_wd extends AppCompatActivity {
     public void wd(View view) {
 
         EditText amount = findViewById(R.id.inputMoney);
-        double money = Double.parseDouble(String.valueOf(amount));
+        double money = Double.parseDouble(amount.getText().toString());//將輸入的金額轉換成double
 
 
         Intent intent = new Intent();
         intent.putExtra("Total2", money);
-        setResult(RESULT_OK, intent);
+        setResult(RESULT_OK, intent);//
         finish();
 
     }
