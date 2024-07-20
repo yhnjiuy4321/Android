@@ -28,7 +28,6 @@ public class JP_EXcu extends AppCompatActivity {
     public void exchange(View view) {
 
 
-
         EditText amount = findViewById(R.id.input);
         EditText rate = findViewById(R.id.Rate);
 
@@ -42,8 +41,8 @@ public class JP_EXcu extends AppCompatActivity {
             intent.putExtra("JPY", result);
             setResult(RESULT_OK, intent);
             finish();
-        }else {
-            double result = money / exrate;
+        }else if (view.getId() == R.id.exchangeBTN1) {
+            double result = money / exrate;//
             Intent intent = new Intent();
             intent.putExtra("inputJPY", money);
             intent.putExtra("NTD", result);

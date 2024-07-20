@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onActivityResult(ActivityResult o) {
                 //這裡寫另一個Activity回傳資料後的處理
-                if(o.getData() != null && o.getResultCode()== Activity.RESULT_OK){ //
+                if(o.getData() != null && o.getResultCode()== Activity.RESULT_OK){
+                    //RESULT_OK是一個常數，代表操作成功，getResultsCode()是取得操作結果的方法
                     bmi = o.getData().getDoubleExtra("bmi", -1);
                     updateUI();
                 }

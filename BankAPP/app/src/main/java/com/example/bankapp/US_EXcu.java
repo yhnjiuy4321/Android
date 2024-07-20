@@ -1,6 +1,9 @@
 package com.example.bankapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +24,31 @@ public class US_EXcu extends AppCompatActivity {
             return insets;
         });
     }
+
+
+    public void exchange(View view) {
+
+        EditText amount = findViewById(R.id.input2);
+        EditText rate = findViewById(R.id.Rate2);
+
+        double money = Double.parseDouble(amount.getText().toString());
+        double exrate = Double.parseDouble(rate.getText().toString());
+
+        if (view.getId() == R.id.NTDexchUSD) {
+            double result = money / exrate;
+            Intent intent = new Intent();
+            intent.putExtra("inputNTD", money);
+            intent.putExtra("USD", result);
+            setResult(RESULT_OK, intent);
+            finish();
+        } else if (view.getId() == R.id.USDexchNTD) {
+            double result = money * exrate;
+            Intent intent = new Intent();
+            intent.putExtra("inputUSD", money);
+            intent.putExtra("NTD", result);
+            setResult(RESULT_OK, intent);
+            finish();
+        }
+    }
+
 }

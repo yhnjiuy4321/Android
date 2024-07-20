@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     private double TotalNTD =0;
     private double TotalUSD =0;
     private double TotalJPY =0;
-    private double JPY =0;
     private double Result =0;
 
     @Override
@@ -58,22 +57,43 @@ public class MainActivity extends AppCompatActivity {
                             error();
                         }
                     }else if (o.getData().hasExtra("JPY")){
-                        JPY = o.getData().getDoubleExtra("JPY", 0);
+                        Result = o.getData().getDoubleExtra("JPY", 0);
                         Money = o.getData().getDoubleExtra("inputNTD", 0);
                         if (TotalNTD >= Money) {
                             TotalNTD -= Money;
-                            TotalJPY += JPY;
+                            TotalJPY += Result;
                             updateUI();
                         } else {
                             error();
                         }
-                    }
-                    else if (o.getData().hasExtra("NTD")) {
+                    } else if (o.getData().hasExtra("NTD")) {
                         Result = o.getData().getDoubleExtra("NTD", 0);
                         Money = o.getData().getDoubleExtra("inputJPY", 0);
                         if (TotalJPY >= Money) {
                             TotalJPY -= Money;
                             TotalNTD += Result;
+                            updateUI();
+                        } else {
+                            error();
+                        }
+                    }
+                    else if(o.getData().hasExtra("USD")) {
+                        Result = o.getData().getDoubleExtra("USD", 0);
+                        Money = o.getData().getDoubleExtra("inputNTD", 0);
+                        if (TotalNTD >= Money) {
+                            TotalNTD -= Money;
+                            TotalUSD += Result;
+                            updateUI();
+                        } else {
+                            error();
+                        }
+                    }else if (o.getData().hasExtra("NTD")) {
+                        Result = o.getData().getDoubleExtra("NTD", 0);
+                        Money = o.getData().getDoubleExtra("inputUSD", 0); //取得intent的資料，第二個參數是預設值
+                        if (TotalUSD >= Money) {
+                            TotalUSD -= Money; //
+                            TotalNTD += Result;
+                            updateUI();
                         } else {
                             error();
                         }
@@ -96,12 +116,21 @@ public class MainActivity extends AppCompatActivity {
         intentActivityResultLauncher.launch(intent);
     }
 
+    //跳轉到US_EXcu
+    public void usEX(View view) {
+        Intent intent = new Intent(this, US_EXcu.class);
+        intentActivityResultLauncher.launch(intent);
+    }
+
     //更新UI
     private void updateUI() {
 
 
         TextView textView = findViewById(R.id.JPY_Amount);
         textView.setText(String.valueOf(TotalJPY));//將Total轉換成字串
+
+        TextView textView2 = findViewById(R.id.USD_Amount);
+        textView2.setText(String.valueOf(TotalUSD));//將Total轉換成字串
 
         TextView textView1 = findViewById(R.id.NTD_Amount);
         textView1.setText(String.valueOf(TotalNTD));//將Total轉換成字串

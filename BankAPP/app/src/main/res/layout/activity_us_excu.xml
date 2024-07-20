@@ -43,13 +43,13 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextText4"
+                android:id="@+id/input2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:ems="10"
                 android:hint="請輸入金額"
-                android:inputType="text" />
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
@@ -68,13 +68,13 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextText5"
+                android:id="@+id/Rate2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:ems="10"
                 android:hint="請輸入匯率"
-                android:inputType="text" />
+                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
@@ -84,20 +84,22 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/USDexchNTD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
+                android:onClick="exchange"
                 android:text="美元換台幣"
                 android:textSize="16sp" />
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/NTDexchUSD"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
+                android:onClick="exchange"
                 android:text="台幣換美元"
                 android:textSize="16sp" />
         </LinearLayout>

@@ -87,7 +87,7 @@
                         android:textAlignment="textEnd" />
 
                     <TextView
-                        android:id="@+id/textView4"
+                        android:id="@+id/USD_Amount"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.5"
@@ -98,6 +98,7 @@
                     android:id="@+id/MainBTN2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="usEX"
                     android:text="美金換匯" />
             </LinearLayout>
 
@@ -159,7 +160,7 @@
                 android:gravity="center"
                 android:text="操作結果："
                 android:textAlignment="textEnd"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/Result"
@@ -168,7 +169,7 @@
                 android:layout_weight="0.5"
                 android:gravity="center|left"
                 android:textAlignment="viewStart"
-                android:textSize="24sp" />
+                android:textSize="20sp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
