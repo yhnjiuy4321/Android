@@ -1,6 +1,8 @@
 package com.example.bankapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,4 +23,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+
+    //跳轉到NTD_dp_wd
+    public void ntdATM(View view) {
+        Intent intent = new Intent(this, NTD_dp_wd.class);
+        startActivity(intent);
+    }
+
+
+
+
+
 }

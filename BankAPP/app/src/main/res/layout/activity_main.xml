@@ -47,9 +47,10 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/MainBTN1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="ntdATM"
             android:text="新台幣存提款" />
 
         <LinearLayout
@@ -94,7 +95,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/MainBTN2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="美金換匯" />
@@ -136,7 +137,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/MainBTN3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="日圓換匯" />
@@ -166,6 +167,7 @@
                 android:layout_weight="0.5"
                 android:gravity="center|left"
                 android:text="000"
+                android:textAlignment="viewStart"
                 android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>

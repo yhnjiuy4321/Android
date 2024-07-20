@@ -35,8 +35,8 @@ public class Cal_Activity extends AppCompatActivity {
         double bmi = w / (h * h);
 
         Intent intent = new Intent();
-        intent.putExtra("bmi", bmi);
-        setResult(RESULT_OK, intent);
+        intent.putExtra("bmi", bmi);//將bmi資料放入intent
+        setResult(RESULT_OK, intent);//回傳資料
         finish();
 
     }
