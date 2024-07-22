@@ -44,11 +44,11 @@ public class US_EXcu extends AppCompatActivity {
         } else if (view.getId() == R.id.USDexchNTD) {
             double result = money * exrate;
             Intent intent = new Intent();
+            intent.putExtra("action", "USD");
             intent.putExtra("inputUSD", money);
             intent.putExtra("NTD1", result);
             setResult(RESULT_OK, intent);
             finish();
         }
     }
-
 }

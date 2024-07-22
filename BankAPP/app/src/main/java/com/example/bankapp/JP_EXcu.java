@@ -41,7 +41,7 @@ public class JP_EXcu extends AppCompatActivity {
             intent.putExtra("JPY", result);
             setResult(RESULT_OK, intent);
             finish();
-        }else if (view.getId() == R.id.exchangeBTN1) {
+        } else if (view.getId() == R.id.exchangeBTN1) {
             double result = money * exrate;
             Intent intent = new Intent();
             intent.putExtra("inputJPY", money);
@@ -51,3 +51,14 @@ public class JP_EXcu extends AppCompatActivity {
         }
     }
 }
+
+/*
+TextView：
+顯示靜態文本，例如標籤、說明文字、標題等。
+不需要用戶輸入或編輯的情況。
+例如顯示用戶名、顯示計算結果、顯示描述性文字等。
+EditText：
+需要用戶輸入或編輯文本的情況。
+用於表單輸入、搜索框、評論區等。
+例如用戶輸入密碼、輸入電子郵件地址、輸入搜索關鍵字等。
+*/

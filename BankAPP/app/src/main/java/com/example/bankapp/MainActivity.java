@@ -23,10 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     private ActivityResultLauncher<Intent> intentActivityResultLauncher;
     private double Money;
-    private double TotalNTD =0;
-    private double TotalUSD =0;
-    private double TotalJPY =0;
-    private double Result =0;
+    private double TotalNTD = 0;
+    private double TotalUSD = 0;
+    private double TotalJPY = 0;
+    private double Result = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +43,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onActivityResult(ActivityResult o) {
                 //這裡寫另一個Activity回傳資料後的處理
-                if(o.getData() != null && o.getResultCode()== Activity.RESULT_OK){
-                    if(o.getData().hasExtra("Total1")){ //hasExtra()判斷intent是否有這個資料
+                if (o.getData() != null && o.getResultCode() == Activity.RESULT_OK) {
+                    if (o.getData().hasExtra("Total1")) { //hasExtra()判斷intent是否有這個資料
                         Money = o.getData().getDoubleExtra("Total1", 0);
                         TotalNTD += Money;
                         updateUI();
-                    }else if(o.getData().hasExtra("Total2")) {
+                    } else if (o.getData().hasExtra("Total2")) {
                         Money = o.getData().getDoubleExtra("Total2", 0);
                         if (TotalNTD >= Money) {
                             TotalNTD -= Money;
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             error();
                         }
-                    }else if (o.getData().hasExtra("JPY")){
+                    } else if (o.getData().hasExtra("JPY")) {
                         Result = o.getData().getDoubleExtra("JPY", 0);
                         Money = o.getData().getDoubleExtra("inputNTD", 0);
                         if (TotalNTD >= Money) {
@@ -76,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             error();
                         }
-                    }
-                    else if(o.getData().hasExtra("USD")) {
+                    } else if (o.getData().hasExtra("USD")) {
                         Result = o.getData().getDoubleExtra("USD", 0);
                         Money = o.getData().getDoubleExtra("inputNTD", 0);
                         if (TotalNTD >= Money) {
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         } else {
                             error();
                         }
-                    }else if (o.getData().hasExtra("NTD1")) {
+                    } else if (o.getData().hasExtra("action")) {
                         Result = o.getData().getDoubleExtra("NTD1", 0);
                         Money = o.getData().getDoubleExtra("inputUSD", 0); //取得intent的資料，第二個參數是預設值
                         if (TotalUSD >= Money) {
@@ -100,6 +99,20 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
             }
+            /*
+
+            其他方法
+            String action = o.getData().getStringExtra("action");
+
+            if(action.equals("Value")) {
+                //do something
+            }
+
+            --->計算過程就寫在onCreate()裡面
+
+            */
+
+
         });
     }
 

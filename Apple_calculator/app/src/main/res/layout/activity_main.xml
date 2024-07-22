@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/Process"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="13dp"
@@ -44,6 +44,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#8D8F91"
+                android:onClick="clear"
                 android:text="AC"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -54,6 +55,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#8D8F91"
+                android:onClick="calculate"
                 android:text="+/-" />
 
             <Button
@@ -63,6 +65,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#8D8F91"
+                android:onClick="calculate"
                 android:text="%" />
 
             <Button
@@ -72,6 +75,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#EAA939"
+                android:onClick="calculate"
                 android:text="/"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -93,6 +97,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_weight="1"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="7"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -103,6 +108,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="8" />
 
             <Button
@@ -112,6 +118,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="9" />
 
             <Button
@@ -121,6 +128,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#EAA939"
+                android:onClick="calculate"
                 android:text="X"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -142,6 +150,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_weight="1"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="4"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -152,6 +161,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="5" />
 
             <Button
@@ -161,6 +171,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="6" />
 
             <Button
@@ -170,6 +181,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#EAA939"
+                android:onClick="calculate"
                 android:text="一"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -191,6 +203,7 @@
                 android:layout_marginStart="0dp"
                 android:layout_weight="1"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="1"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -201,6 +214,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="2" />
 
             <Button
@@ -210,6 +224,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="3" />
 
             <Button
@@ -219,6 +234,7 @@
                 android:layout_marginHorizontal="3dp"
                 android:layout_weight="1"
                 android:backgroundTint="#EAA939"
+                android:onClick="calculate"
                 android:text="+"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -239,6 +255,7 @@
                 android:layout_marginRight="1.5dp"
                 android:layout_weight="0.5"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="0"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -248,6 +265,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.25"
                 android:backgroundTint="#444547"
+                android:onClick="calculate"
                 android:text="." />
 
             <Button
@@ -259,6 +277,7 @@
                 android:layout_marginRight="3dp"
                 android:layout_weight="0.25"
                 android:backgroundTint="#EAA939"
+                android:onClick="calculate"
                 android:text="="
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
