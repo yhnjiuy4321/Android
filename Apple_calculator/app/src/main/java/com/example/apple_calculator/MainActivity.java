@@ -29,105 +29,91 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
+
     public void calculate(View view) {
+        TextView textView1 = findViewById(R.id.Process);
+        TextView textView2 = findViewById(R.id.Process);
 
         if (view.getId() == R.id.n0) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("0");
+            textView1.setText("0");
             firstNumber = 0;
         } else if (view.getId() == R.id.n1) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("1");
+            textView1.setText("1");
             firstNumber = 1;
         }
         else if (view.getId() == R.id.n2) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("2");
+            textView1.setText("2");
             firstNumber = 2;
         }
         else if (view.getId() == R.id.n3) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("3");
+            textView1.setText("3");
             firstNumber = 3;
         }
         else if (view.getId() == R.id.n4) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("4");
+            textView1.setText("4");
             firstNumber = 4;
         }
         else if (view.getId() == R.id.n5) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("5");
+            textView1.setText("5");
             firstNumber = 5;
         }
         else if (view.getId() == R.id.n6) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("6");
+            textView1.setText("6");
             firstNumber = 6;
         }
         else if (view.getId() == R.id.n7) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("7");
+            textView1.setText("7");
             firstNumber = 7;
         }
         else if (view.getId() == R.id.n8) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("8");
+            textView1.setText("8");
             firstNumber = 8;
         }
         else if (view.getId() == R.id.n9) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("9");
+            textView1.setText("9");
             firstNumber = 9;
         }
 
         if (view.getId() == R.id.n0) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("0");
+            textView2.setText("0");
             secondNumber = 0;
+
         } else if (view.getId() == R.id.n1) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("1");
+            textView2.setText("1");
             secondNumber = 1;
         }
         else if (view.getId() == R.id.n2) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("2");
+            textView2.setText("2");
             secondNumber = 2;
         }
         else if (view.getId() == R.id.n3) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("3");
+            textView2.setText("3");
             secondNumber = 3;
         }
         else if (view.getId() == R.id.n4) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("4");
+            textView2.setText("4");
             secondNumber = 4;
         }
         else if (view.getId() == R.id.n5) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("5");
+            textView2.setText("5");
             secondNumber = 5;
         }
         else if (view.getId() == R.id.n6) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("6");
+            textView2.setText("6");
             secondNumber = 6;
         }
         else if (view.getId() == R.id.n7) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("7");
+            textView2.setText("7");
             secondNumber = 7;
         }
         else if (view.getId() == R.id.n8) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("8");
+            textView2.setText("8");
             secondNumber = 8;
         }
         else if (view.getId() == R.id.n9) {
-            TextView textView = findViewById(R.id.Process);
-            textView.setText("9");
+            textView2.setText("9");
             secondNumber = 9;
         }
 
@@ -141,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
         } else if (view.getId() == R.id.divide) {
             operator = "/";
         }
-
 
 
 
@@ -161,15 +146,18 @@ public class MainActivity extends AppCompatActivity {
                     result = firstNumber / secondNumber;
                     break;
             }
-            TextView textView = findViewById(R.id.Process);
-            textView.setText(String.valueOf(result));
+            TextView textView3 = findViewById(R.id.Process);
+            textView3.setText(String.valueOf(result));
         }
 
     }
 
+
+
+
     public void clear(View view) {
-        TextView textView = findViewById(R.id.Process);
-        textView.setText("0");
+        TextView textView0 = findViewById(R.id.Process);
+        textView0.setText("0");
     }
 
 }
