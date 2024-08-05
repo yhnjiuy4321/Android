@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView tv = (TextView)findViewById(R.id.size);
         TextView tv_size = (TextView)findViewById(R.id.textView);
 
-        float size = tv.getTextSize()/getResources().getDisplayMetrics().scaledDensity;
+        float size = tv.getTextSize()/getResources().getDisplayMetrics().scaledDensity; // 取得文字大小
         tv.setTextSize(size - 5); // 設定文字大小
         tv_size.setText(String.valueOf(size - 5));
 
@@ -98,6 +98,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         float y = motionEvent.getY();
         tv_position.setText("x: "+x+" y: "+y);
 
-        return true; // false意思是事件沒有被消耛，還會繼續往下傳遞，true則是消耗掉事件
+        return true; //
     }
 }

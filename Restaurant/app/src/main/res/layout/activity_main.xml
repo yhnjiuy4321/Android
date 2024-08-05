@@ -8,60 +8,137 @@
     android:backgroundTint="#EDCBB1"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="#E47373"
-        android:backgroundTint="#E0AAAA"
+        android:layout_height="729dp"
+        android:background="#F9A566"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="top"
-            android:orientation="vertical">
+            android:layout_height="670dp"
+            android:background="#FAA666"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imageView2"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="232dp"
-                app:srcCompat="@drawable/dintaifeng" />
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FFFFFF"
-                android:backgroundTint="#C12222"
-                android:text="鼎泰豐"
-                android:textAlignment="center"
-                android:textColor="#FAFAFA"
-                android:textSize="34sp" />
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="236dp"
+                    app:srcCompat="@drawable/dintaifeng" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="台中店"
-                android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#EF6C00"
+                    android:text="鼎泰豐"
+                    android:textAlignment="center"
+                    android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="407台中市西屯區臺灣大道三段251號號B2" />
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="台中店"
+                    android:textSize="20sp" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:text="營業時間：星期一～星期五11:00-21:00／星期六～星期日10:30-21:00" />
-        </LinearLayout>
-    </ScrollView>
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="平日11:00–21:00" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="假日10:30–21:00" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="3dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#0A781C"
+                        app:icon="@android:drawable/stat_sys_phone_call"
+                        app:iconGravity="textEnd"
+                        app:iconPadding="0dp"
+                        app:iconSize="20dp"
+                        app:iconTint="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="電話號碼： 04 2259 9500" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="99dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        android:backgroundTint="#283593"
+                        app:icon="@android:drawable/ic_dialog_map"
+                        app:iconGravity="textEnd"
+                        app:iconPadding="0dp"
+                        app:iconSize="20dp"
+                        app:iconTint="#FFFFFF" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="407台中市西屯區臺灣大道三段251號號B2" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="鼎泰豐是一家世界知名的台灣餐廳品牌，以其精緻的小籠包和其他中華料理而聞名。1958年，鼎泰豐在台北市創立，最初是一家專門經營食用油的商店。1972年，隨著市場需求的變化，鼎泰豐轉型為一間專注於小籠包的餐廳。這次轉型不僅奠定了鼎泰豐的市場地位，更使其在台灣美食界嶄露頭角。  鼎泰豐的招牌菜是小籠包，其製作工藝精湛，皮薄餡多，湯汁豐富，入口即化。這道菜的精髓在於對食材和製作過程的嚴格要求，無論是面皮的薄厚還是餡料的配比，都經過反覆的調整和改進。此外，鼎泰豐的紅燒牛肉麵、蝦仁炒飯和排骨湯等菜品也深受顧客喜愛，這些菜品以其獨特的風味和高品質贏得了廣泛的讚譽。  在營運理念方面，鼎泰豐始終堅持品質保證、顧客服務和清潔衛生。無論是食材的選擇還是製作過程的標準化，鼎泰豐都力求完美，確保每一道菜品的高品質。同時，餐廳的服務人員經過專業培訓，提供熱情、細緻的服務，讓每一位顧客都能感受到賓至如歸的體驗。餐廳的清潔衛生標準亦極高，許多分店採用開放式廚房設計，顧客可以直觀地看到食物的製作過程，進一步提升了用餐的信任感。  隨著鼎泰豐在台灣的成功，這家餐廳品牌開始向全球擴展。目前，鼎泰豐在中國大陸、日本、美國、新加坡和韓國等地均設有分店，成為國際餐飲界的佼佼者。其多次獲得包括米其林星級評價在內的國際美食獎項，進一步證明了鼎泰豐在全球範圍內的影響力和美譽度。  總之，鼎泰豐以其精緻的菜品、高品質的服務和清潔的環境，吸引了來自世界各地的顧客。無論是品嘗其招牌的小籠包，還是其他經典菜品，鼎泰豐都能提供令人難忘的美食體驗。這家餐廳不僅是台灣美食文化的代表，更是世界各地美食愛好者心目中的饗宴天堂。" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/booking"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#C30505"
+            android:text="線上訂位" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
