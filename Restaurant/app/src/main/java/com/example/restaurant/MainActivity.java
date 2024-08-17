@@ -1,6 +1,9 @@
 package com.example.restaurant;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +23,28 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void reserve(View view) {
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_VIEW); // 開啟瀏覽器
+        i.setData(Uri.parse("https://inline.app/order/-KNf3CgtuFU5cea5_nVg/-MflLgRwC03THvPMQdiO?language=zh-tw")); // 設定網址
+        startActivity(i);// 啟動
+    }
+
+    public void map(View view) {
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_VIEW); // 開啟地圖
+        i.setData(Uri.parse("geo:0,0?q=407台中市西屯區臺灣大道三段251號號B2")); // 設定地點
+        startActivity(i);// 啟動
+    }
+
+
+    public void call(View view) {
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_DIAL); // 開啟撥號
+        //i.setAction(Intent.ACTION_CALL); // 直接撥打
+        //i.setData(Uri.parse("tel:0909")); // 設定電話號碼
+        startActivity(i);// 啟動
     }
 }

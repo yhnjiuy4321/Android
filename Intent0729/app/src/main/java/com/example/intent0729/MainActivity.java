@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void fcuPhone(View view) {
         Intent i = new Intent();
-        //i.setAction(Intent.ACTION_DIAL); // 開啟撥號
-        i.setAction(Intent.ACTION_CALL); // 直接撥打
-        i.setData(Uri.parse("tel:0909")); // 設定電話號碼
+        i.setAction(Intent.ACTION_DIAL); // 開啟撥號
+        //i.setAction(Intent.ACTION_CALL); // 直接撥打
+        //i.setData(Uri.parse("tel:0909")); // 設定電話號碼
         startActivity(i);// 啟動
     }
 
